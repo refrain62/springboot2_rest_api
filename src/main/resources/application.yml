@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: spring boot2 rest API
+  
+  # OUTPUT
+  output:
+    ansi:
+      enabled: detect
+
+  #DATASOURCE
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;
+    username: sa
+    password:
+#    url: jdbc:mysql://localhost:3306/demo3_db?useSSL=false
+#    username: demo_user
+#    password: demo_pass
+#    driver-class-name: com.mysql.jdbc.Driver
+# JPA
+  jpa:
+    open-in-view: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
+        use_sql_comments: true
+        generate_statistics: false
+
+# JACKSON
+  jackson:
+    serialization:
+      indent-output: true
+      write-dates-as-timestamps: false
+      write-durations-as-timestamps: true
+
+# DEVTOOLS
+  devtools:
+    livereload:
+      enabled: false
+    restart:
+      log-condition-evaluation-delta: true
+      enabled: true
+
+server:
+  port: 9000
+  servlet:
+    context-path: /app
+    
+logging:
+  file:
+    name: demo.log
+    max-size: 50MB
+    max-history: 10
+  level:
+    root: info
+    '[org.springframework]': info
+    '[org.springframework.security]': debug
+    '[org.hibernate]': info
+    '[org.hibernate.sql]': debug
+    '[org.hibernate.type.descriptor.sql.BasicBinder]': trace
+    '[com.example.demo]': debug
+ 
+      
