@@ -1,6 +1,6 @@
 # Spring Security with Spring Boot 2.0で簡単なRest APIを実装する の写経
 # https://qiita.com/rubytomato@github/items/6c6318c948398fa62275
-# https://github.com/rubytomato/demo-security-jwt-spring2
+# https://github.com/rubytomato/demo-security-spring2/
 
 
 
